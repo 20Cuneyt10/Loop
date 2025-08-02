@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 150.0
 const JUMP_VELOCITY = -400.0
-
+@onready var animation_player = $Sprite2D/AnimationPlayer as AnimationPlayer
 
 func _physics_process(delta: float) -> void:
+	animation_player.play("Run")
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -22,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if position.y > 800 :
-		queue_free()
+		get_tree().reload_current_scene()
 	print(velocity.y)
 	print(velocity.x)
 

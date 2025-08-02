@@ -8,12 +8,12 @@
 
 [node name="Floor" parent="." instance=ExtResource("2_ou2um")]
 position = Vector2(109, 635)
-scale = Vector2(0.0794046, 0.0800003)
+scale = Vector2(0.279855, 0.24)
 script = ExtResource("3_1tr6y")
 
 [node name="Player" parent="." instance=ExtResource("1_6aelf")]
-position = Vector2(109, 107)
-scale = Vector2(0.0794046, 0.0800003)
+position = Vector2(107, 617)
+scale = Vector2(0.04, 0.041)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
